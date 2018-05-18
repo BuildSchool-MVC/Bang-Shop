@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ShopingCart
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+</head>
+
+<style>
+    div.step-container {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    div.step-container div.step,
+    div.step-container div.step2 {
+        background-color: #69C795;
+        position: relative;
+        display: inline-block;
+        flex-basis: 300px;
+        height: 50px;
+    }
+
+    div.step-container div.step:after,
+    div.step-container div.step2:after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        background: #69C795;
+        width: 50px;
+        height: 50px;
+        transform: rotate(-45deg);
+        z-index: 1;
+        box-shadow: 3px 3px 0px 0px white;
+    }
+
+    div.step-container div.step2 {
+        background-color: #ccc;
+    }
+
+    div.step-container div.step2:after {
+        background: #ccc;
+    }
+
+    div.step-container div.step1:before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        background: white;
+        width: 50px;
+        height: 50px;
+        transform: rotate(-45deg);
+        z-index: 1;
+        box-shadow: 3px 3px 0px 0px white;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+
+<body style="font-family:微軟正黑體;">
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <img src="Image\Logo.png">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">BING SHOP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                CLOTHING
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Boy</a>
+                                <a class="dropdown-item" href="#">Girl</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PANTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ACCESSORIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SHOES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BAGS</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div style="padding:0 100px;">
+                    <a href="#">
+                        <i class="fas fa-user fa-2x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-cart-plus fa-2x"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="step-container" style="margin-top: 25px; margin-left: 300px;">
+        <div class="step step1" style="text-align:center;">
+            <span style="font-size:30px;">購物車明細</span>
+        </div>
+        <div class="step2" style="text-align:center;">
+            <span style="font-size:30px;">付款與運送方式</span>
+        </div>
+        <div class="step2" style="text-align:center;">
+            <span style="font-size:30px;">訂單成立</span>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col text-center">
+                <h5>訂單建立後商品明細、金額皆無法更改並無合併訂單處理，請您再三確認後再完成結帳</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <td class="clTdPhoto"></td>
+                        <td class="clTag syHide HighFont"></td>
+                        <td class="clTdMerNo text-center">商品編號</td>
+                        <td class="clTdMerName">商品名稱</td>
+                        <td class="clTdColor text-center">規格</td>
+                        <td class="clTdNum text-center">數量</td>
+                        <td class="clTdPrice text-center">單價 </td>
+                        <td class="clTdSub text-center">小計</td>
+                        <td class="clTdDelete text-center">刪除</td>
+                    </tr>
+                    <tr>
+                        <td class="clPhoto">
+                            <a href="itemDetail.aspx?mNo1=77088">
+                                <img src="http://www.wendhouse.com/SHTICK/Shang_Pin/180423/77088/77088_1_300.jpg" height="150px">
+                            </a>
+                        </td>
+                        <td class="clTag syHide HighFont"></td>
+                        <td class="clTdMerNo text-center">77088</td>
+                        <td class="clTdMerName">寬鬆顯瘦無袖純色A字背心裙</td>
+                        <td class="text-center clTdColor">米色</td>
+                        <td class="text-center clTdSize">F</td>
+                        <td class="cltdNum">
+                            <select id="cmbNum1" name="cmbNum1" class="cmbNum">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </td>
+                        <td class="coNum coPrice">$ 298</td>
+                        <td class="clTdDelete text-center">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="clPhoto">
+                            <a href="itemDetail.aspx?mNo1=77088">
+                                <img src="https://www.costco.com.tw/medias/sys_master/products/h33/hf0/8831850053662.jpg" height="150px">
+                            </a>
+                        </td>
+                        <td class="clTag syHide HighFont"></td>
+                        <td class="clTdMerNo text-center">11088</td>
+                        <td class="clTdMerName">休閒短褲</td>
+                        <td class="text-center clTdColor">藍色</td>
+                        <td class="text-center clTdSize">M</td>
+                        <td class="cltdNum">
+                            <select id="cmbNum1" name="cmbNum1" class="cmbNum">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                        <td class="coNum coPrice">$ 299</td>
+                        <td class="clTdDelete text-center">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+     <footer style="text-align:center;position:absolute;bottom:0;margin: -100px 500px">
+        <p>©2018 2018 BingTeam. All rights reserved.</p>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
