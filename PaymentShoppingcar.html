@@ -68,7 +68,7 @@
 
 <body style="font-family:微軟正黑體;">
     <nav class="navbar fixed-top navbar-light bg-light">
-        <img src="Image\Logo.png">
+        <img src="https://github.com/BuildSchool-MVC/Bing-Shop/blob/master/Image/Logo.png?raw=true">
         <div class="btn-group" role="group" aria-label="Basic example">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">BING SHOP</a>
@@ -107,7 +107,7 @@
                         <i class="fas fa-user fa-2x"></i>
                     </a>
                     <a href="#">
-                        <i class="fas fa-cart-plus fa-2x"></i>
+                        <i class="fas fa-cart-plus fa-2x ml-3"></i>
                     </a>
                 </div>
             </nav>
@@ -145,11 +145,13 @@
     </div>
     <div class="container">
         <div class="row mt-5">
+            <h5>運送方式</h5>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
                         <td>
                             <div class="row">
+
                                 <div class="col-1">
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
                                 </div>
@@ -179,8 +181,8 @@
                                     $ 60
                                 </div>
                         </td>
-                        </div>
                     </tr>
+                    <!--
                     <tr>
                         <td>
                             <div class="row">
@@ -214,36 +216,99 @@
                                 </div>
                             </div>
                         </td>
+                    </tr>-->
+                    <tr>
+                        <td>總金額NT$3640+運費NT$60=應付金額NT$3700</td>
                     </tr>
+
                 </tbody>
             </table>
+        
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h5>訂購資料</h5>
+                    <hr>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">姓名</label>
+                        <div class="col-sm-10">
+                            <input type="Name" class="form-control" id="inputPassword" placeholder="Name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-2 col-form-label">電話</label>
+                        <div class="col-sm-10">
+                            <input type="Phone" class="form-control" id="inputPhone" placeholder="Phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-2 col-form-label">取貨門市</label>
+                        <button type="button" class="btn btn-light">選擇門市</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h5>發票資訊</h5>
+                    <hr>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">電子發票</label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">電子發票/手機載具</label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">捐贈發票</label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">統編(公司戶)發票</label>
+                    <br/>
+                    <span>依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票。</span>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-2 col-form-label">中獎發票寄送位置</label>
+                        <div class="col-sm-4">
+                            <input type="Phone" class="form-control" id="inputPhone" placeholder="ADDRESS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <button type="button" class="btn btn-primary">返回購物車</button>
+                </div>
+                <div class="col-10">
+                </div>
+                <div class="col-1">
+                    <button type="button" class="btn btn-primary">下一步</button>
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-1">
-                <button type="button" class="btn btn-primary">返回購物車</button>
-            </div>
-            <div class="col-10">
-            </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary">下一步</button>
-            </div>
-
-        </div>
-    </div>
-    <footer style="text-align:center;position:absolute;bottom:0;margin: 0 500px">
-        <p>©2018 2018 BingTeam. All rights reserved.</p>
-    </footer>
+        <footer style="text-align:center;bottom:0;">
+            <p>©2018 2018 BingTeam. All rights reserved.</p>
+        </footer>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
