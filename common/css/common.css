@@ -78,7 +78,7 @@ nav,menu,details,hgroup,summary {
 
 /* ------------------------------
    COMMON ELEMENTS
------------------------------- */
+------------------------------ 
 body {
 	font-size: 14px;
 	line-height: 1.6em;
@@ -90,7 +90,7 @@ body {
 
 #wrapper {
 	text-align: center;
-}
+}*/
 
 /* ------------------------------
    baseHeader
@@ -165,3 +165,81 @@ body {
 }
 .cfx:after {clear: both;}
 .cfx {*zoom: 1;}
+
+
+.product {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.product img {
+	width: 180px;
+	height: 180px;
+	transform: scale(1);
+	transition: all 1s ease 0s;
+}
+
+.product a:hover img {
+	transform: scale(1.4);
+	transition: all 1s ease 0s;
+}
+
+.product p {
+	bottom: 0;
+}
+
+div.step-container {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+}
+
+div.step-container div.step,
+div.step-container div.step2 {
+	background-color: #69C795;
+	position: relative;
+	display: inline-block;
+	flex-basis: 300px;
+	height: 50px;
+}
+
+div.step-container div.step:after,
+div.step-container div.step2:after {
+	content: '';
+	position: absolute;
+	right: -10px;
+	background: #69C795;
+	width: 50px;
+	height: 50px;
+	transform: rotate(-45deg);
+	z-index: 1;
+	box-shadow: 3px 3px 0px 0px white;
+}
+
+div.step-container div.step2 {
+	background-color: #ccc;
+}
+
+div.step-container div.step2:after {
+	background: #ccc;
+}
+
+div.step-container div.step1:before {
+	content: '';
+	position: absolute;
+	left: -20px;
+	background: white;
+	width: 50px;
+	height: 50px;
+	transform: rotate(-45deg);
+	z-index: 1;
+	box-shadow: 3px 3px 0px 0px white;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+}
