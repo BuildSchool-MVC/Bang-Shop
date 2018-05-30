@@ -1,2 +1,2 @@
-# Bang-Shop
-Bang Shop
+# Bing-Shop
+Bing Shop
